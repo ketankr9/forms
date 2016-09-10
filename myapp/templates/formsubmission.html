@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Form Fillup</title></head>
+<body>
+hello DJANGO
+<h3>* marked fields are mandatory</h3>
+{{ user }}
+<form action="" method="post">
+<label>Name:</label>
+<input type="text" name="name">
+<input type="submit" name="submit" value="Go">
+</form>
+<br/><br/>
+<h1>A heading</h1>
+<h2>A sub-heading</h2>
+<h3>A sub-sub-heading</h3>
+<p>A paragraph of text</p>
+<em>text</em>
+<strong>text</strong>
+<br />
+<a href="https://djangogirls.org">link</a>
+<ul><li>first item</li><li>second item</li></ul>
+-----------------------<br/>
+{% for e in cpi9 %}
+{{ e.first_name }}
+{% endfor %}
+</body>
+</html>
