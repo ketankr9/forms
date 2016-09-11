@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head><title>Form Fillup</title></head>
-<body>
-hello DJANGO
+{% extends 'base.html' %}
+
+{% block content %}
+<table style="width:100%" border="True">
+  <td><center><a href="../login/">Company Login</a></center></td>
+  <td><center><a href="http://placement.iitbhu.ac.in/#!/view/#login/">Student Login</a></center></td>
+</table>
 <h3>* marked fields are mandatory</h3>
 {{ user }}
-<form action="" method="post">
-<label>Name:</label>
-<input type="text" name="name">
-<input type="submit" name="submit" value="Go">
+<form method="post" action="../dummy/">{% csrf_token %}
+  {{ form }}
+  <input type="submit" value="ok" name="submit">
 </form>
+
+
 <br/><br/>
 <h1>A heading</h1>
 <h2>A sub-heading</h2>
@@ -21,8 +24,14 @@ hello DJANGO
 <a href="https://djangogirls.org">link</a>
 <ul><li>first item</li><li>second item</li></ul>
 -----------------------<br/>
+This is dynaamic content</br>
+
 {% for e in cpi9 %}
-{{ e.first_name }}
+
+<a href="../details/{{ e.pk }}">{{ e.first_name }}</a>
+<!-- comment hard coded instead of url '../details' e.pk-->
 {% endfor %}
-</body>
-</html>
+
+{% block content-hello%}<h1>This is an inherited block</h1>{% endblock %}
+
+{% endblock %}

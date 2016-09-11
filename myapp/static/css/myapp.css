@@ -1,0 +1,31 @@
+h3 {
+  color: #FF160F;
+}
+h1 {
+  color: #FCA205;
+  font-family: 'Lobster';
+}
+
+body{
+  padding-left: 15px;
+  padding-right: 15px;
+  }
+  
+#b{
+  font-size: 44px;
+  font-family: 'Baloo Tamma' , cursive;
+  background-color: lightgreen;
+
+}
+#a{
+  font-size: 25px;
+  font-family: 'Indie Flower', cursive;
+  background-color: lightgreen;
+
+}
+table{
+  font-size: 25px;
+  border:0px;
+
+
+}
